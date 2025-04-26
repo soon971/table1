@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #dda2a2;
+            text-align: center;
+        }
+        th {
+            background-color: #dd5b5b;
+        }
+        caption {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Table1</h1>
+<table id="categoryTable">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Alpha</td><td id="alphaValue"></td></tr>
+        <tr><td>Beta</td><td id="betaValue"></td></tr>
+        <tr><td>Charlie</td><td id="charlieValue"></td></tr>
+    </tbody>
+</table>
+</body>
+
+<script>
+    const values = {
+        A1: 41,
+        A2: 18,
+        A3: 21,
+        A4: 63,
+        A5: 2,
+        A6: 53,
+        A7: 5,
+        A8: 57,
+        A9: 60,
+        A10: 93,
+        A11: 28,
+        A12: 3,
+        A13: 90,
+        A14: 39,
+        A15: 80,
+        A16: 88,
+        A17: 49,
+        A18: 60,
+        A19: 26,
+        A20: 28
+    };
+    
+    // Calculation
+    const alpha = values.A5 + values.A20;        
+    const beta = values.A15 / values.A7;         
+    const charlie = values.A13 * values.A12;     
+    
+    // Display the results
+    document.getElementById('alphaValue').innerText = alpha;
+    document.getElementById('betaValue').innerText = beta;
+    document.getElementById('charlieValue').innerText = charlie;
+</script>
+</html>
